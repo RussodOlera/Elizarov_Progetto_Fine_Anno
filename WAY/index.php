@@ -36,6 +36,7 @@
                         <input type="submit" name="submit" value="Entra">
                         </div>
                     </form>
+                        <div class="link">Hai dimenticato la password?<a href="forget_pwd.php">Clicca qui</a></div>
                         <div class="link">Non hai un account? <a href="register.php">Registrati ora</a></div>
                 </section>
             </div> 
