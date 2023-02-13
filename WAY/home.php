@@ -21,8 +21,7 @@
             }
             else
             {
-              echo "non ho trovato nulla";
-              //header("location: users.php");
+              header("location: users.php");
             }
           ?>
 
@@ -35,7 +34,7 @@
           </div>
         </header>
         <div class="chat-box">
-            
+          <button> crea gruppo</button>
         </div>
         <form action="#" class="typing-area">
           <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_name; ?>" hidden>
