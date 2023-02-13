@@ -9,7 +9,6 @@ if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $uname = $_POST['uname'];
     $password = $_POST['password'];
-    //$img = $_POST['image'];
     $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE mail='$email' AND user_name='$uname'");
     if(mysqli_num_rows($duplicate)>0)
     {
@@ -34,6 +33,12 @@ if(isset($_POST['submit'])){
                     $new_img_name = $time.$img_name;
                     if(move_uploaded_file($tmp_name,"images/".$new_img_name)){
                         $sql = "INSERT INTO users VALUES('','$name','$surname','$bday','$n_tel','$email','$password','$uname','$new_img_name','Offline')";
+                        mysqli_query($conn, $sql);
+                        $sql = " CREATE TABLE IF NOT EXISTS $uname (
+                                friend_id   INT     PRIMARY KEY,
+                                friend      VARCHAR(255)    DEFAULT NULL
+                            )";
+                        
                         mysqli_query($conn, $sql);
                         echo "<script> alert('Registration Successful!') </script>";
                         header("Location:index.php"); 
