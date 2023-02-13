@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
         $sql2 = mysqli_query($conn, "UPDATE users SET status = '$status' WHERE id = '$temp'");
         $_SESSION['id'] = $row['id'];
         $_SESSION['user_name'] = $row['user_name'];
-        header("Location:home.php");
+        header("Location:users.php");
         //echo "<script> alert('$temp'); </script>";
     }
     else

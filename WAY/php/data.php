@@ -14,10 +14,9 @@
         }
         ($row['status'] == "Offline") ? $offline = "Offline" : $offline = "";
         ($outgoing_id == $row['id']) ? $hid_me = "hide" : $hid_me = "";
-        //echo $row['id'];
         $output .= '<a href="../WAY/chat.php?id='.$row['id'].'">
                     <div class="content">
-                    <img src="../images/'. $row['img_profilo'] .'" alt="">
+                    <img src="../WAY/images/'. $row['img_profilo'] .'" alt="">
                     <div class="details">
                         <span>'. $row['name']. " " . $row['surname'] .'</span>
                         <p>'. $you . $msg .'</p>
