@@ -1,0 +1,9 @@
+user table
+
+id
+nome cognome
+data_nascita n° telefono
+email
+password
+User Name
+Immagine profilo
