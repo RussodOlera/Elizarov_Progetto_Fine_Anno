@@ -23,26 +23,19 @@
               header("location: users.php");
             }
           ?>
-
-          <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
-          
-          <img src="images/<?php echo $row['img_profilo']; ?>" alt="">
-          <a href ="user.php">
+          <a href="home.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
           <div class="details">
-            <span><?php echo $row['name']. " " . $row['surname'] ?></span>
-            <p><?php echo $row['status']; ?></p>
+            <span><?php echo $row['user_name'] ?></span>
           </div>
-          </a>
         </header>
         <div class="chat-box">
-        <section class="users">
-        <div class="search">
-        <button> crea gruppo</button>
-        </div> 
-        </section>
-        </div>
-        
-      </section>
+        <img src="images/<?php echo $row['img_profilo']; ?>" alt="" width="150px">
+        <p>Nome: <?php echo $row['name']; ?></p>
+        <p>Cognome: <?php echo $row['surname']; ?></p>
+        <p>Data di nascita: <?php echo $row['bday']; ?></p>
+        <p>Numero di telefono: <?php echo $row['n_tel']; ?></p>
+        <p>Email: <?php echo $row['mail']; ?></p>
     </div>
+    <button >Modifica</button>
   </body>
 </html>

@@ -30,7 +30,7 @@
                 }
             }
         }else{
-            $output .= '<div class="text">No messages are available. Once you send message they will appear here.</div>';
+            $output .= '<div class="text">Nessun messaggio  :( <br> Non appena saluterai questa persona potrai vedere tutta la vostra conversazione.</div>';
         }
         echo $output;
     }else{
